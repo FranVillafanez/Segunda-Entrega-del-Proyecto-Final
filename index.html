@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <h1>Registro de empleados</h1>
+    <h1><center>Registro horas extra de empleados</center></h1>
 <form id = "addPeople">
     <div class="row">
         <div class="col">
@@ -25,6 +25,24 @@
             <option value="Cronista">Cronista</option>
             <option value="Ayudante">Ayudante</option>
     </select>
+    <select class="form-select" aria-label="Default select example" id = "month">
+        <option selected>Seleccionar Mes</option>
+        <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+    </select>
+    <div class="col">
+        <input type="number" class="form-control" placeholder="Cantidad de horas" aria-label="Cantidad de horas" id="campoHoras">
+    </div>
     <button type="button" class="btn btn-primary"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" onclick="saveData()";>
   Registrar 
@@ -37,6 +55,8 @@
               <th scope="col">Nombre</th>
               <th scope="col">Apellido</th>
               <th scope="col">Cargo</th>
+              <th scope="col">Mes</th>
+              <th scope="col">Horas</th>
             </tr>
           </thead>
       </table>
