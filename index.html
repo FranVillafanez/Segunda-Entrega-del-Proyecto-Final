@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío complementario</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<form id = "addPeople">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="campoNombre">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="campoApellido">
+        </div>
+    <select class="form-select" aria-label="Default select example" id = "selector">
+            <option selected>Seleccionar cargo</option>
+            <option value="1">Redactor</option>
+            <option value="2">Cronista</option>
+            <option value="3">Ayudante</option>
+    </select>
+    <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" onclick="saveData()";>
+  Registrar 
+    </button>
+    </div>
+</form>
+    <table class="table" id ="peopleTable">
+        <thead>
+            <tr>       
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Cargo</th>
+            </tr>
+          </thead>
+      </table>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="index2.js"></script>
+</body>
+</html>
