@@ -14,6 +14,9 @@
 <form id = "addPeople">
     <div class="row">
         <div class="col">
+            <input type="number" class="form-control" placeholder="Id" aria-label="NId" id="campoId">
+        </div>
+        <div class="col">
             <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="campoNombre">
         </div>
         <div class="col">
@@ -51,7 +54,8 @@
 </form>
     <table class="table" id ="peopleTable">
         <thead>
-            <tr>       
+            <tr>
+              <th scope="col">Id</th>       
               <th scope="col">Nombre</th>
               <th scope="col">Apellido</th>
               <th scope="col">Cargo</th>
