@@ -30,6 +30,13 @@ updateTable();
 console.log(registros)
 }
 
+let fila;
+// Botón editar
+// $(document).on("click", "#editBtn", function(){
+//   fila =  $(this).closest("tr");
+//   id = parseInt(fila.find('td:eq(0)').text());
+//   alert(id);
+// });
 
 function updateTable (){
 const peopleTable = document.querySelector ('#peopleTable');
@@ -65,6 +72,7 @@ const empleadoHTML = document.createElement('tr')
 
 function deleteEmpleado(event){
   const btn = event.taget;
+  console.dir (btn);
   const id = btn.id.split("_")[1];
   registros = registros.filter ((empleado) => empleado.id != id)
   updateTable();
