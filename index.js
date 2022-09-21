@@ -18,7 +18,8 @@ const dataForm = document.querySelector ("#addPeople");
 
 function saveData (){
 const newRegistro = new Usuario (
-  dataForm.campoId.value,
+  registros.length + 1,
+  // dataForm.campoId.value,
   dataForm.campoNombre.value, 
   dataForm.campoApellido.value,
   dataForm.selector.value,
@@ -54,7 +55,7 @@ const empleadoHTML = document.createElement('tr')
                 type="button"
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 class="btn btn-warning"
-                onclick="editEmpleado(event)"
+                onclick="editData(event)"
                 >
                 Editar
                 </button>
@@ -63,7 +64,7 @@ const empleadoHTML = document.createElement('tr')
                 type="button"
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 class="btn btn-danger"
-                onclick="deleteEmpleado(event)">
+                onclick="deleteData(event)">
                 Borrar
                 </button>
             </div></td>
@@ -72,7 +73,7 @@ const empleadoHTML = document.createElement('tr')
   });
 }
 
-function deleteEmpleado(event){
+function deleteData(event){
   const btn = event.taget;
   console.dir (btn);
   const id = btn.id.split("_")[1];
