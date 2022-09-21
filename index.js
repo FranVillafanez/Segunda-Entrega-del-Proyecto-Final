@@ -44,14 +44,14 @@ const peopleTable = document.querySelector ('#peopleTable');
 const empleadoHTML = document.createElement('tr')
   registros.map(empleado => {
       empleadoHTML.innerHTML = `
-      <td>${empleado.id}</td>
+      <th scope="col">${empleado.id}</th>
       <td>${empleado.nombre}</td>
       <td>${empleado.apellido}</td>
       <td>${empleado.cargo}</td>
       <td>${empleado.mes}</td>
       <td>${empleado.horas}</td>
       <td><div><button
-                id="editBtn"
+                id="editBtn_${empleado.id}"
                 type="button"
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 class="btn btn-warning"
@@ -75,8 +75,19 @@ const empleadoHTML = document.createElement('tr')
 
 function deleteData(event){
   const btn = event.taget;
-  console.dir (btn);
+  console.log (btn);
   const id = btn.id.split("_")[1];
   registros = registros.filter ((empleado) => empleado.id != id)
   updateTable();
 } 
+
+function editData(event) {
+  const btn = event.target;
+  const id = btn.id.split("_")[1];
+  const empleado = registros.filter((empleado) => empleado.id == id)[0];
+  dataForm.campoNombre.value = empleado.nombre;
+  dataForm.campoApellido.value = empleado.apellido;
+  dataForm.selector.value = empleado.cargo;
+  dataForm.month.value = empleado.mes;
+  dataForm.campoHoras.value = empleado.horas;
+}
