@@ -52,6 +52,7 @@ const empleadoHTML = document.createElement('tr')
       <td><div><button
                 id="editBtn"
                 type="button"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 class="btn btn-warning"
                 onclick="editEmpleado(event)"
                 >
@@ -60,6 +61,7 @@ const empleadoHTML = document.createElement('tr')
                 <button
                 id="deleteBtn_${empleado.id}"
                 type="button"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 class="btn btn-danger"
                 onclick="deleteEmpleado(event)">
                 Borrar
