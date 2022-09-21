@@ -22,12 +22,17 @@
         <div class="col">
             <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="campoApellido">
         </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
     <select class="form-select" aria-label="Default select example" id = "selector">
             <option selected>Seleccionar cargo</option>
             <option value="Redactor">Redactor</option>
             <option value="Cronista">Cronista</option>
             <option value="Ayudante">Ayudante</option>
     </select>
+            </div>
+            <div class="col">
     <select class="form-select" aria-label="Default select example" id = "month">
         <option selected>Seleccionar Mes</option>
         <option value="Enero">Enero</option>
@@ -43,8 +48,10 @@
         <option value="Noviembre">Noviembre</option>
         <option value="Diciembre">Diciembre</option>
     </select>
+    </div>
     <div class="col">
         <input type="number" class="form-control" placeholder="Cantidad de horas" aria-label="Cantidad de horas" id="campoHoras">
+    </div>
     </div>
     <button type="button" class="btn btn-primary"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" onclick="saveData()";>
