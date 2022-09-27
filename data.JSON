@@ -1,0 +1,6 @@
+[
+    {"cargo": "Redactor", "sueldo": 150000},
+    {"cargo": "Ayudante", "sueldo": 80000},
+    {"cargo": "Cronista", "sueldo": 130000},
+    {"cargo": "Editor", "sueldo": 190000}
+]
