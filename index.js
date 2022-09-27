@@ -29,6 +29,10 @@ const newRegistro = new Usuario (
 registros.push (newRegistro)
 updateTable();
 console.log(registros)
+Toastify({
+  text: `Se agregó usuai ${dataForm.campoNombre.value}`,
+  duration: 3000,
+}).showToast();
 }
 
 let fila;
