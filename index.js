@@ -95,3 +95,22 @@ function editData(event) {
   dataForm.month.value = empleado.mes;
   dataForm.campoHoras.value = empleado.horas;
 }
+// Fetch
+const lista = document.querySelector('#listado')
+
+fetch('/data.json')
+    .then( (res) => res.json())
+    .then( (data) => {
+
+        data.forEach((empleado) => {
+            const li = document.createElement('li')
+            li.innerHTML = `
+                <strong>${empleado.cargo}</strong>
+                :
+                ${empleado.sueldo}
+                <hr/>
+            `
+   
+            lista.append(li)
+        })
+    })
